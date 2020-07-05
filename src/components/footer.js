@@ -31,23 +31,27 @@ export default class Footer extends React.Component {
               <a
                 href="https://hiringcoders.gama.academy/"
                 title="hiringCoders"
-                target="_blank"
+                rel="noopener noreferrer"
               >
-                <img src={hiringCodersLogo} />
+                <img src={hiringCodersLogo} alt="Hiring Coders Logo" />
               </a>
             </div>
             <div className="companyLogo">
-              <a href="https://www.vtex.com" title="Vtex" target="_blank">
-                <img src={vtexLogo} />
+              <a
+                href="https://www.vtex.com"
+                title="Vtex"
+                rel="noopener noreferrer"
+              >
+                <img src={vtexLogo} alt="Vtex logo" />
               </a>
             </div>
             <div className="companyLogo">
               <a
                 href="https://gama.academy/"
                 title="GamaAcademy"
-                target="_blank"
+                rel="noopener noreferrer"
               >
-                <img src={gamaAcademyLogo} />
+                <img src={gamaAcademyLogo} alt="Gama Academy logo" />
               </a>
             </div>
           </div>
