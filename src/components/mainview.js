@@ -52,7 +52,6 @@ export default class Mainview extends React.Component {
             integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk'
             crossOrigin='anonymous'
           />
-          <link href='./style/style.css' rel='stylesheet' />
           <link
             href='https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap'
             rel='stylesheet'
