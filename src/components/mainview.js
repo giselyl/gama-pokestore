@@ -1,0 +1,78 @@
+import React from "react";
+import Cards from "./cards";
+import Cart from "./cart";
+import axios from "axios";
+
+export default class Mainview extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { list: undefined, cart: undefined };
+  }
+
+  fetchData = async (name, offset) =>
+    axios
+      .get(
+        `https://pokeapi.co/api/v2/pokemon/${
+          name ?? ""
+        }?offset=${offset}&limit=21`
+      )
+      .then((res) => {
+        this.setState({
+          list: res.data,
+        });
+      });
+
+  async componentWillReceiveProps(props) {
+    await this.fetchData(props.name, props.offset);
+  }
+
+  async componentDidMount() {
+    await this.fetchData(this.props.name, this.props.offset);
+  }
+
+  addToCart = (pokemon) =>
+    this.setState({
+      ...this.state,
+      cart: pokemon,
+    });
+
+  render() {
+    return (
+      <>
+        <div>
+          <link
+            rel='stylesheet'
+            href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
+            integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk'
+            crossOrigin='anonymous'
+          />
+          <link href='./style/style.css' rel='stylesheet' />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap'
+            rel='stylesheet'
+          />
+
+          <div className='container-fluid card'>
+            <div className='row'>
+              <div className='col-md-8'>
+                <div className='row'>
+                  {this.state.list?.results.map((it, index) => (
+                    <div
+                      key={index}
+                      className='col-md-4'
+                      style={{ textTransform: "capitalize" }}>
+                      <Cards name={it.name} callBack={this.addToCart} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className='col-md-4'>
+                <Cart poke={this.state.cart} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  }
+}
