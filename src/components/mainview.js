@@ -9,7 +9,7 @@ export default class Mainview extends React.Component {
     this.state = { list: undefined, cart: undefined };
   }
 
-  fetchData = async (name, offset) =>
+  fetchData = async (name, offset) => {
     axios
       .get(
         `https://pokeapi.co/api/v2/pokemon/${
@@ -21,20 +21,26 @@ export default class Mainview extends React.Component {
           list: res.data,
         });
       });
+  };
 
   async componentWillReceiveProps(props) {
-    await this.fetchData(props.name, props.offset);
+    if (props !== this.props) await this.fetchData(props.name, props.offset);
   }
 
   async componentDidMount() {
     await this.fetchData(this.props.name, this.props.offset);
   }
 
-  addToCart = (pokemon) =>
+  addToCart = (pokemon) => {
+    let poke = JSON.parse(localStorage.getItem(`pokemon_${pokemon.name}`));
+    poke.count = (poke.count ?? 0) + 1;
+    localStorage.setItem(`pokemon_${pokemon.name}`, JSON.stringify(poke));
+
     this.setState({
       ...this.state,
-      cart: pokemon,
+      cart: poke,
     });
+  };
 
   render() {
     return (

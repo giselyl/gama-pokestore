@@ -7,15 +7,35 @@ export default class Cards extends React.Component {
     this.state = { pokemon: undefined };
   }
 
-  fetchData = async (name) =>
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) => {
+  fetchData = async (name) => {
+    const cachedPokemon = localStorage.getItem(`pokemon_${name}`);
+
+    if (cachedPokemon) {
       this.setState({
-        pokemon: res.data,
+        pokemon: JSON.parse(cachedPokemon),
       });
-    });
+    } else {
+      axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) => {
+        const data = res.data;
+
+        const poke = {
+          name: data.name,
+          price: Math.floor(Math.random() * 100) + 2,
+          image: data.sprites.front_default,
+          types: [...data.types],
+        };
+
+        localStorage.setItem(`pokemon_${name}`, JSON.stringify(poke));
+
+        this.setState({
+          pokemon: poke,
+        });
+      });
+    }
+  };
 
   async componentWillReceiveProps(props) {
-    await this.fetchData(props.name);
+    if (props?.name !== this.props?.name) await this.fetchData(props.name);
   }
 
   async componentDidMount() {
@@ -40,7 +60,7 @@ export default class Cards extends React.Component {
                   <img
                     alt='pokemon'
                     className='pokemon-image'
-                    src={this.state.pokemon?.sprites.front_default}
+                    src={this.state.pokemon?.image}
                   />
                 </div>
               </div>
@@ -56,7 +76,9 @@ export default class Cards extends React.Component {
                       </ul>
                     </div>
                     <div className='col-md-6' id='total-price'>
-                      <h3>Total: R$</h3>
+                      <h3>
+                        Total: R$ {(this.state.pokemon?.price ?? 0).toFixed(2)}
+                      </h3>
                       <button type='button' onClick={this.addToCart}>
                         Add
                       </button>

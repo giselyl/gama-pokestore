@@ -7,10 +7,12 @@ export default class Cart extends React.Component {
   }
 
   async componentWillReceiveProps(props) {
-    this.setState({
-      list: [...this.state.list, props.poke],
-      total: this.state.total + (props?.poke?.price ?? 0),
-    });
+    if (props?.poke !== this.props?.poke) {
+      this.setState({
+        list: [...this.state.list, props.poke],
+        total: this.state.total + (props?.poke?.price ?? 0),
+      });
+    }
   }
 
   remove = (obj) => {
@@ -35,14 +37,14 @@ export default class Cart extends React.Component {
                 </div>
               </div>
               {this.state.list
-                ?.filter((item) => item?.sprites?.front_default ?? false)
+                ?.filter((item) => item?.image ?? false)
                 .map((it, index) => (
                   <div className='row' key={`div_${index}`}>
                     <div key={`img_${index}`} className='col-md-4'>
                       <img
                         alt='Bootstrap Preview'
                         className='pokemon-cart-image'
-                        src={it.sprites.front_default}
+                        src={it.image}
                       />
                     </div>
                     {/* <div
