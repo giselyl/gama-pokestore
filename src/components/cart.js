@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default class Cart extends React.Component {
   constructor(props) {
@@ -31,23 +31,23 @@ export default class Cart extends React.Component {
 
   render() {
     return (
-      <div className='sticky-top'>
-        <div className='container-fluid cart'>
-          <div className='row'>
-            <div className='col-md-12'>
-              <div className='row'>
-                <div className='col-md-12 carrinho'>
+      <div className="sticky-top">
+        <div className="container-fluid cart">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-12 carrinho">
                   <h3>Carrinho</h3>
                 </div>
               </div>
               {this.state.list
                 ?.filter((item) => item?.poke.image ?? false)
                 .map((it, index) => (
-                  <div className='row' key={`div_${index}`}>
-                    <div key={`img_${index}`} className='col-md-4'>
+                  <div className="row" key={`div_${index}`}>
+                    <div key={`img_${index}`} className="col-md-4">
                       <img
-                        alt='Bootstrap Preview'
-                        className='pokemon-cart-image'
+                        alt="Bootstrap Preview"
+                        className="pokemon-cart-image"
                         src={it.poke.image}
                       />
                     </div>
@@ -58,33 +58,35 @@ export default class Cart extends React.Component {
                       </div> */}
 
                     <div key={`price_${index}`} className={`col-md-4 price`}>
-                      <h3>
+                      <h5 className={`poke-price`}>
                         R$ {it.poke.price ?? 0} - {it.count}
-                      </h3>
+                      </h5>
                     </div>
                     <div
                       key={`remove_${index}`}
                       className={`col-md-4 pokemon-name`}
-                      style={{ textAlign: "center" }}>
-                      <button type='button' onClick={() => this.remove(it)}>
+                      style={{ textAlign: "center" }}
+                    >
+                      <button type="button" onClick={() => this.remove(it)}>
                         Remove
                       </button>
                     </div>
                   </div>
                 ))}
-              <div className='row'>
-                <div className='col-md-6 total'>
+              <div className="row">
+                <div className="col-md-6 total">
                   <h3>Total</h3>
                 </div>
-                <div className='col-md-6 price'>
+                <div className="col-md-6 price">
                   <h3>R$ {this.state.total.toFixed(2)}</h3>
                 </div>
               </div>
-              <div className='row'>
-                <div className='col-md-12'>
+              <div className="row">
+                <div className="col-md-12">
                   <button
-                    type='button'
-                    className='btn btn-outline-secondary btn-lg btn-block finalizar'>
+                    type="button"
+                    className="btn btn-outline-secondary btn-lg btn-block finalizar "
+                  >
                     Finalizar
                   </button>
                 </div>

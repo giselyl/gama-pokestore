@@ -2,6 +2,7 @@ import React from "react";
 import Cards from "./cards";
 import Cart from "./cart";
 import axios from "axios";
+import pokeFont from "../assets/pokemon/Pokemon Solid.ttf";
 
 export default class Mainview extends React.Component {
   constructor(props) {
@@ -47,31 +48,29 @@ export default class Mainview extends React.Component {
       <>
         <div>
           <link
-            rel='stylesheet'
-            href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
-            integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk'
-            crossOrigin='anonymous'
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossOrigin="anonymous"
           />
-          <link
-            href='https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap'
-            rel='stylesheet'
-          />
+          <link href={pokeFont} rel="stylesheet" />
 
-          <div className='container-fluid card'>
-            <div className='row'>
-              <div className='col-md-8'>
-                <div className='row'>
+          <div className="container-fluid card">
+            <div className="row">
+              <div className="col-md-8">
+                <div className="row">
                   {this.state.list?.results.map((it, index) => (
                     <div
                       key={index}
-                      className='col-md-4'
-                      style={{ textTransform: "capitalize" }}>
+                      className="col-md-4"
+                      style={{ textTransform: "capitalize" }}
+                    >
                       <Cards name={it.name} callBack={this.addToCart} />
                     </div>
                   ))}
                 </div>
               </div>
-              <div className='col-md-4'>
+              <div className="col-md-4">
                 <Cart poke={this.state.cart} />
               </div>
             </div>

@@ -47,39 +47,40 @@ export default class Cards extends React.Component {
   render() {
     return (
       <div>
-        <div className='container-fluid card'>
-          <div className='row'>
-            <div className='col-md-12'>
-              <div className='row'>
-                <div className='col-md-12' id='pokemon-name'>
+        <div className="container-fluid card">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-12" id="pokemon-name">
                   <h3>{this.state.pokemon?.name}</h3>
                 </div>
               </div>
-              <div className='row'>
-                <div className='col-md-12 pokemon-image'>
+              <div className="row">
+                <div className="col-md-12 pokemon-image">
                   <img
-                    alt='pokemon'
-                    className='pokemon-image'
+                    alt="pokemon"
+                    className="pokemon-image"
                     src={this.state.pokemon?.image}
                   />
                 </div>
               </div>
-              <div className='row'>
-                <div className='col-md-12'>
-                  <div className='row'>
-                    <div className='col-md-6' id='pokemon-detailes'>
-                      <h5>Detalhes do pokemon</h5>
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="row">
+                    <div className="col-md-6" id="pokemon-detailes">
                       <ul>
                         {this.state.pokemon?.types.map((it, index) => (
                           <li key={index}>{it.type.name}</li>
                         ))}
                       </ul>
                     </div>
-                    <div className='col-md-6' id='total-price'>
-                      <h3>
-                        Total: R$ {(this.state.pokemon?.price ?? 0).toFixed(2)}
-                      </h3>
-                      <button type='button' onClick={this.addToCart}>
+                    <div className="col-md-6" id="add-pokemon">
+                      <h5>R$ {(this.state.pokemon?.price ?? 0).toFixed(2)}</h5>
+                      <button
+                        type="button"
+                        className="btn-add btn btn-dark btn-input"
+                        onClick={this.addToCart}
+                      >
                         Add
                       </button>
                     </div>
