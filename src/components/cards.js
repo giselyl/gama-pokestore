@@ -46,16 +46,16 @@ export default class Cards extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="space-between-cards">
         <div className="container-fluid card">
           <div className="row">
-            <div className="col-md-12">
-              <div className="row">
-                <div className="col-md-12" id="pokemon-name">
+            <div className="col-md-12 unit-card">
+              <div className="row ">
+                <div className="col-md-12 " id="pokemon-name">
                   <h3>{this.state.pokemon?.name}</h3>
                 </div>
               </div>
-              <div className="row">
+              <div className="row ">
                 <div className="col-md-12 pokemon-image">
                   <img
                     alt="pokemon"
@@ -64,7 +64,7 @@ export default class Cards extends React.Component {
                   />
                 </div>
               </div>
-              <div className="row">
+              <div className="row ">
                 <div className="col-md-12">
                   <div className="row">
                     <div className="col-md-6" id="pokemon-detailes">
@@ -78,7 +78,7 @@ export default class Cards extends React.Component {
                       <h5>R$ {(this.state.pokemon?.price ?? 0).toFixed(2)}</h5>
                       <button
                         type="button"
-                        className="btn-add btn btn-dark btn-input"
+                        className="btn-add btn btn-dark btn-add"
                         onClick={this.addToCart}
                       >
                         Add

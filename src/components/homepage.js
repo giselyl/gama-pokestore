@@ -26,20 +26,28 @@ export default class Homepage extends React.Component {
         <Header />
         <Mainview offset={this.state.page * 21} />
 
-        <div className='row'>
-          <div className='col-md-8' style={{ textAlign: "center" }}>
+        <div className="row">
+          <div className="col-md-8" style={{ textAlign: "center" }}>
             {this.state.page === 0 ? (
               ""
             ) : (
-              <button type='button' onClick={this.previousPage}>
+              <button
+                type="button"
+                className="btn btn-outline-secondary btn-lg next-previous"
+                onClick={this.previousPage}
+              >
                 {"<<"} Previous
               </button>
             )}
-            {` ${this.state.page} `}
+
             {this.state.page === 45 ? (
               ""
             ) : (
-              <button type='button' onClick={this.nextPage}>
+              <button
+                type="button"
+                className="btn btn-outline-secondary btn-lg next-previous"
+                onClick={this.nextPage}
+              >
                 Next {">>"}
               </button>
             )}

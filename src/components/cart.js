@@ -67,7 +67,11 @@ export default class Cart extends React.Component {
                       className={`col-md-4 pokemon-name`}
                       style={{ textAlign: "center" }}
                     >
-                      <button type="button" onClick={() => this.remove(it)}>
+                      <button
+                        type="button"
+                        className="remove-pokemon"
+                        onClick={() => this.remove(it)}
+                      >
                         Remove
                       </button>
                     </div>

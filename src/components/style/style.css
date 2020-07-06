@@ -1,148 +1,177 @@
 @font-face {
-    font-family: "pokeFont";
-    src: url("../../assets/pokemon/Pokemon\ Solid.ttf");
+  font-family: "pokeFont";
+  src: url("../../assets/pokemon/Pokemon\ Solid.ttf");
 }
 
 .card {
-    background-color: green;
-    border-radius: 20px;
-    border-color: #737383;
-    font-family: 'pokeFont', 'changa', sans-serif;
-    text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px, rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
-    color: #fbd800;
+  border-color: #4f559c !important;
+  border-radius: 10px !important;
+  font-family: "pokeFont", "changa", sans-serif;
+  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  color: #fbd800;
+  border-width: initial !important;
 }
 
 #pokemon-name {
-    text-align: center;
+  text-align: center;
 }
 
 .pokemon-image {
-    text-align: center;
-    border-radius: 20px;
+  text-align: center;
+  border-radius: 20px;
 }
 
 #add-pokemon {
-    text-align: end;
+  text-align: end;
 }
 
 .btn-add {
-    background-color: #4f559c !important;
-    font-family: 'pokeFont', 'changa', sans-serif;
-    text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px, rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
-    color: #fbd800;
-    border-radius: 10px !important;
+  background-color: #fbd800 !important;
+  font-family: "pokeFont", "changa", sans-serif;
+
+  color: #4f559c !important;
+  border-radius: 10px !important;
 }
 
 #pokemon-detailes {
-    text-align: start;
+  text-align: start;
 }
 
 .cart {
-    background-color: #ffff;
-    border-radius: 20px;
-    border-color: #737383;
-    font-family: 'pokeFont', 'changa', sans-serif;
-    text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px, rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
-    color: #fbd800;
-    border-bottom: grey;
+  background-color: #ffff;
+  border-radius: 20px;
+  border-color: #737383;
+  font-family: "pokeFont", "changa", sans-serif;
+  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  color: #fbd800;
+  border-bottom: grey;
 }
 
 .carrinho {
-    text-align: center;
+  text-align: center;
+  border-radius: 10px !important;
+  border-width: initial !important;
 }
 
 .pokemon-cart-image {
-    max-width: 50%;
-    max-height: 50%;
-    text-align: center;
-    border-radius: 20px;
+  max-width: 50%;
+  max-height: 50%;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .price {
-    text-align: end;
+  text-align: end;
 }
 
 .finalizar {
-    border-color: black;
-    color: black;
+  border-color: black;
+  color: black;
+}
+
+.finalizar:hover {
+  border-color: #4f559c !important;
 }
 
 .btn-outline-secondary:hover {
-    background-color: black;
+  background-color: black;
 }
 
 .input {
-    text-align: left;
-    width: 50%;
-    border-color: #4f559c !important;
-    border-radius: 10px !important;
-    border-width: initial !important;
+  text-align: left;
+  width: 50%;
+  border-color: #4f559c !important;
+  border-radius: 10px !important;
+  border-width: initial !important;
 }
 
 .btn-input {
-    text-align: right;
-    max-height: 38px;
-    margin-left: 10px;
-    background-color: #4f559c !important;
-    border-bottom-color: #4f559c !important;
-    border-radius: 10px !important;
-    font-family: 'pokeFont', 'changa', sans-serif;
-    text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px, rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
-    color: #fbd800 !important;
-
+  text-align: right;
+  max-height: 38px;
+  margin-left: 10px;
+  background-color: #4f559c !important;
+  border-bottom-color: #4f559c !important;
+  border-radius: 10px !important;
+  font-family: "pokeFont", "changa", sans-serif;
+  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  color: #fbd800 !important;
 }
 
 .search {
-    display: flex;
-    padding: 1%;
-
-
+  display: flex;
+  padding: 1%;
 }
 
 #img-header {
-    text-align: left;
-    max-width: 80%;
-    max-height: 80%;
+  text-align: left;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .footer {
-    text-align: center;
-    bottom: 0;
-    background-color: lightgray;
-    position: relative;
+  text-align: center;
+  bottom: 0;
+  background-color: #4f559c;
+  position: relative;
+  border-color: #4f559c;
+  border-width: initial;
 }
 
 .companyLogo {
-    flex: 1;
-    align-items: stretch;
+  flex: 1;
+  align-items: stretch;
 }
 
 .footer img {
-    height: 50px;
+  height: 50px;
 }
 
 .logos {
-    justify-content: center;
-    display: inline-flex;
-    flex: 1;
+  justify-content: center;
+  display: inline-flex;
+  flex: 1;
 }
 
 .pokeprice {
-    text-align: left;
+  text-align: left;
+}
+
+.next-previous {
+  font-family: "pokeFont", "changa", sans-serif;
+  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  color: #fbd800 !important;
+  background-color: #4f559c !important;
+  border-radius: 10px !important;
+  margin: 5%;
 }
 
 .finalizar {
-    font-family: 'pokeFont', 'changa', sans-serif;
-    text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px, rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
-    color: #fbd800 !important;
-    background-color: #4f559c !important;
-    border-radius: 10px !important;
+  font-family: "pokeFont", "changa", sans-serif;
+  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  color: #fbd800 !important;
+  background-color: #4f559c !important;
+  border-radius: 10px !important;
 }
 
 .remove-pokemon {
-    font-family: 'pokeFont', 'changa', sans-serif;
-    text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px, rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
-    color: #fbd800 !important;
-    background-color: #4f559c !important;
-    border-radius: 10px !important;
+  font-family: "pokeFont", "changa", sans-serif;
+  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  color: #fbd800 !important;
+  background-color: #4f559c !important;
+  border-radius: 10px !important;
+}
+
+#space-between-cards {
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.unit-card {
+  background-color: #4f559c;
 }
