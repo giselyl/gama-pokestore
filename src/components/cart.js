@@ -19,6 +19,9 @@ export default class Cart extends React.Component {
       });
     }
   }
+  cleanCart = () => {
+    this.setState({ list: [], total: 0, groups: {} });
+  };
 
   remove = (obj) => {
     const val = this.state.list.find((it) => it.poke.name === obj.poke.name);
@@ -89,7 +92,7 @@ export default class Cart extends React.Component {
               </div>
               <div className="row btn-finalizar-row">
                 <div className="col-md-12 btn-finalizar-row">
-                  <SimpleModal />
+                  <SimpleModal clear={this.cleanCart} />
                 </div>
               </div>
             </div>
