@@ -35,12 +35,12 @@ export default class SimpleModal extends React.Component {
           aria-describedby="simple-modal-description"
         >
           <div id="modal-card">
-            <img id="sucess-gif" src={gif} alt="sucess gif" />
-            <h4 id="simple-modal-title">Compra finalizada com sucesso!</h4>
+            {/* <img id="sucess-gif" src={gif} alt="sucess gif" /> */}
+            <h4 id="simple-modal-title">Compra finalizada com sucesso !</h4>
             <button
               type="button"
               onClick={this.handleClose}
-              className="btn btn-outline-secondary btn-lg btn-block fechar "
+              className="btn btn-outline-secondary btn-lg  fechar "
             >
               Fechar
             </button>

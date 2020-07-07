@@ -19,6 +19,7 @@ export default class Cards extends React.Component {
         const data = res.data;
 
         const poke = {
+          id: data.id,
           name: data.name,
           price: Math.floor(Math.random() * 100) + 2,
           image: data.sprites.front_default,
@@ -56,11 +57,12 @@ export default class Cards extends React.Component {
                 </div>
               </div>
               <div className="row ">
-                <div className="col-md-12 pokemon-image">
+                <div className="col-md-12 div-pokemon-image">
                   <img
                     alt="pokemon"
                     className="pokemon-image"
-                    src={this.state.pokemon?.image}
+                    src={`https://pokeres.bastionbot.org/images/pokemon/${this.state.pokemon?.id}.png`}
+                    // src={this.state.pokemon?.image}
                   />
                 </div>
               </div>

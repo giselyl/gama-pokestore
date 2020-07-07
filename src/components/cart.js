@@ -53,7 +53,8 @@ export default class Cart extends React.Component {
                       <img
                         alt="Bootstrap Preview"
                         className="pokemon-cart-image"
-                        src={it.poke.image}
+                        // src={it.poke.image}
+                        src={`https://pokeres.bastionbot.org/images/pokemon/${it.poke.id}.png`}
                       />
                     </div>
                     {/* <div

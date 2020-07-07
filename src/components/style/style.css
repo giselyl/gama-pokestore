@@ -18,6 +18,8 @@
 .pokemon-image {
   text-align: center;
   border-radius: 20px;
+  max-width: 85%;
+  max-height: 85%;
 }
 
 #add-pokemon {
@@ -146,6 +148,10 @@
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 20px;
+  outline: none !important;
+  text-align: end;
+  margin-bottom: 0;
+  margin-top: 200px;
 }
 
 .finalizar {
@@ -153,9 +159,11 @@
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 0px 0px 15px 15px !important;
+  outline: none;
 }
 .finalizar :hover {
   border-color: none;
+  outline: none;
 }
 .remove-pokemon {
   font-family: "pokeFont", "changa", sans-serif;
@@ -181,10 +189,9 @@
 }
 #simple-modal-title {
   text-align: center;
+  font-family: "pokemonFont", "changa", sans-serif;
 }
-#modal-card {
-  border-radius: 20px;
-}
+
 .btn-finalizar-row {
   padding-right: 0px !important;
   padding-left: 0px !important;
@@ -214,8 +221,8 @@
 }
 #sucess-gif {
   border-radius: 35px;
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 100%;
+  max-height: 100%;
   text-align: center !important;
 }
 .modal-class {
@@ -229,8 +236,7 @@
   color: #fbd800 !important;
 }
 #modal-card {
-  background-color: white !important;
-  width: 30%;
+  background-image: url("../../assets/giphy.gif") !important;
   border-width: initial;
   border-color: #4f559c !important;
   border-radius: 20px !important;
@@ -240,4 +246,9 @@
   right: 50%;
   transform: translate(50%, -50%);
   border: 4px solid #4f559c;
+  height: 300px;
+  width: 500px !important;
+}
+.div-pokemon-image {
+  text-align: center;
 }
