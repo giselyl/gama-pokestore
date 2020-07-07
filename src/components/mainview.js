@@ -55,7 +55,7 @@ export default class Mainview extends React.Component {
           />
           <link href={pokeFont} rel="stylesheet" />
 
-          <div className="container-fluid card">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-md-8">
                 <div className="row">

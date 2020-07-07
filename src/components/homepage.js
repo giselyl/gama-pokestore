@@ -36,7 +36,7 @@ export default class Homepage extends React.Component {
                 className="btn btn-outline-secondary btn-lg next-previous"
                 onClick={this.previousPage}
               >
-                {"<<"} Previous
+                {"<<"}
               </button>
             )}
 
@@ -48,7 +48,7 @@ export default class Homepage extends React.Component {
                 className="btn btn-outline-secondary btn-lg next-previous"
                 onClick={this.nextPage}
               >
-                Next {">>"}
+                {">>"}
               </button>
             )}
           </div>

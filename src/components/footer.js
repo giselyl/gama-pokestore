@@ -27,7 +27,7 @@ export default class Footer extends React.Component {
             <p> Copyright © 2020 | Gisely Lacerda</p>
           </div>
           <div className="col-md-12 logos">
-            <div className="companyLogo">
+            <div className="companyLogo logo">
               <a
                 href="https://hiringcoders.gama.academy/"
                 title="hiringCoders"
@@ -36,7 +36,7 @@ export default class Footer extends React.Component {
                 <img src={hiringCodersLogo} alt="Hiring Coders Logo" />
               </a>
             </div>
-            <div className="companyLogo">
+            <div className="companyLogo vtex-logo">
               <a
                 href="https://www.vtex.com"
                 title="Vtex"
@@ -45,7 +45,7 @@ export default class Footer extends React.Component {
                 <img src={vtexLogo} alt="Vtex logo" />
               </a>
             </div>
-            <div className="companyLogo">
+            <div className="companyLogo logo">
               <a
                 href="https://gama.academy/"
                 title="GamaAcademy"

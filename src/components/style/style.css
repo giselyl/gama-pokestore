@@ -7,8 +7,8 @@
   border-color: #4f559c !important;
   border-radius: 10px !important;
   font-family: "pokeFont", "changa", sans-serif;
-  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800;
   border-width: initial !important;
 }
@@ -46,13 +46,13 @@
   text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
     rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
   color: #fbd800;
-  border-bottom: grey;
+  border-width: initial;
+  border: solid;
+  border-color: #4f559c;
 }
 
 .carrinho {
   text-align: center;
-  border-radius: 10px !important;
-  border-width: initial !important;
 }
 
 .pokemon-cart-image {
@@ -95,8 +95,8 @@
   border-bottom-color: #4f559c !important;
   border-radius: 10px !important;
   font-family: "pokeFont", "changa", sans-serif;
-  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
 }
 
@@ -125,8 +125,11 @@
   align-items: stretch;
 }
 
-.footer img {
-  height: 50px;
+.logo img {
+  height: 60px;
+}
+.vtex-logo img {
+  height: 80px;
 }
 
 .logos {
@@ -141,8 +144,8 @@
 
 .next-previous {
   font-family: "pokeFont", "changa", sans-serif;
-  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 10px !important;
@@ -151,8 +154,8 @@
 
 .finalizar {
   font-family: "pokeFont", "changa", sans-serif;
-  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 10px !important;
@@ -160,8 +163,8 @@
 
 .remove-pokemon {
   font-family: "pokeFont", "changa", sans-serif;
-  text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px;
+  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
+    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 10px !important;
@@ -174,4 +177,9 @@
 
 .unit-card {
   background-color: #4f559c;
+}
+.space-between-items {
+  border-bottom: dotted;
+  border-color: #4f559c;
+  padding-top: 5px;
 }

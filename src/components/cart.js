@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import SimpleModal from "./modal";
+import trashIcon from "../assets/delete-24px.svg";
 
 export default class Cart extends React.Component {
   constructor(props) {
@@ -43,8 +45,8 @@ export default class Cart extends React.Component {
               {this.state.list
                 ?.filter((item) => item?.poke.image ?? false)
                 .map((it, index) => (
-                  <div className="row" key={`div_${index}`}>
-                    <div key={`img_${index}`} className="col-md-4">
+                  <div className="row space-between-items" key={`div_${index}`}>
+                    <div key={`img_${index}`} className="col-md-4 carrinho">
                       <img
                         alt="Bootstrap Preview"
                         className="pokemon-cart-image"
@@ -72,7 +74,7 @@ export default class Cart extends React.Component {
                         className="remove-pokemon"
                         onClick={() => this.remove(it)}
                       >
-                        Remove
+                        <img alt="trash" src={trashIcon} />
                       </button>
                     </div>
                   </div>
@@ -87,12 +89,7 @@ export default class Cart extends React.Component {
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary btn-lg btn-block finalizar "
-                  >
-                    Finalizar
-                  </button>
+                  <SimpleModal />
                 </div>
               </div>
             </div>

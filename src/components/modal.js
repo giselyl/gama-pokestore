@@ -2,8 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 
-
-export default class Modal extends React.Component {
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
@@ -44,30 +42,35 @@ export default function SimpleModal() {
     setOpen(false);
   };
 
-  const body = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">Text in a modal</h2>
-      <p id="simple-modal-description">Compra realizada com sucesso!</p>
-      <h3>Obrigada!</h3>
-      <SimpleModal />
-    </div>
-  );
-
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
-        Open Modal
+      <button
+        type="button"
+        onClick={handleOpen}
+        className="btn btn-outline-secondary btn-lg btn-block finalizar "
+      >
+        Finalizar
       </button>
+
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        {body}
+        <div style={modalStyle} className={classes.paper}>
+          <h3 id="simple-modal-title">
+            Compra finalizada com sucesso! Obrigado!
+          </h3>
+          <button
+            type="button"
+            onClick={handleClose}
+            className="btn btn-outline-secondary btn-lg btn-block finalizar "
+          >
+            Fechar
+          </button>
+        </div>
       </Modal>
     </div>
   );
 }
-}
-
