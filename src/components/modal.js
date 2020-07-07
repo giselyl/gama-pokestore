@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     width: 400,
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
+    border: "4px solid #4f559c ",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -58,10 +58,8 @@ export default function SimpleModal() {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        <div style={modalStyle} className={classes.paper}>
-          <h3 id="simple-modal-title">
-            Compra finalizada com sucesso! Obrigado!
-          </h3>
+        <div id="modal-card" style={modalStyle} className={classes.paper}>
+          <h3 id="simple-modal-title">Compra finalizada com sucesso!</h3>
           <button
             type="button"
             onClick={handleClose}

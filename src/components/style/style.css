@@ -183,3 +183,9 @@
   border-color: #4f559c;
   padding-top: 5px;
 }
+#simple-modal-title {
+  text-align: center;
+}
+#modal-card {
+  border-radius: 20px;
+}
