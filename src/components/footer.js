@@ -2,7 +2,6 @@ import React from "react";
 import hiringCodersLogo from "../assets/logo-hiring-coders.svg";
 import vtexLogo from "../assets/logo-vtex.svg";
 import gamaAcademyLogo from "../assets/logo-gama.png";
-import linkedinLogo from "../assets/linkedinn.svg";
 import hackerRankLogo from "../assets/hackerRank.svg";
 import github from "../assets/github.svg";
 
