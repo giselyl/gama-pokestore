@@ -7,8 +7,6 @@
   border-color: #4f559c !important;
   border-radius: 10px !important;
   font-family: "pokeFont", "changa", sans-serif;
-  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800;
   border-width: initial !important;
 }
@@ -66,11 +64,6 @@
   text-align: end;
 }
 
-.finalizar {
-  border-color: black;
-  color: black;
-}
-
 .finalizar:hover {
   border-color: #4f559c !important;
 }
@@ -95,8 +88,6 @@
   border-bottom-color: #4f559c !important;
   border-radius: 10px !important;
   font-family: "pokeFont", "changa", sans-serif;
-  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
 }
 
@@ -144,23 +135,27 @@
 
 .next-previous {
   font-family: "pokeFont", "changa", sans-serif;
-  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 10px !important;
   margin: 5%;
 }
+.fechar {
+  font-family: "pokeFont", "changa", sans-serif;
+  color: #fbd800 !important;
+  background-color: #4f559c !important;
+  border-radius: 20px;
+}
 
 .finalizar {
   font-family: "pokeFont", "changa", sans-serif;
-  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
   background-color: #4f559c !important;
-  border-radius: 10px !important;
+  border-radius: 0px 0px 15px 15px !important;
 }
-
+.finalizar :hover {
+  border-color: none;
+}
 .remove-pokemon {
   font-family: "pokeFont", "changa", sans-serif;
   /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
@@ -188,4 +183,25 @@
 }
 #modal-card {
   border-radius: 20px;
+}
+.btn-finalizar-row {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.btn-outline-secondary {
+  border-color: none;
+}
+.dev-data {
+  color: white;
+  text-align: right;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.redes {
+  text-align: left;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.rede {
+  padding-right: 1%;
 }

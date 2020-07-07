@@ -87,8 +87,8 @@ export default class Cart extends React.Component {
                   <h3>R$ {this.state.total.toFixed(2)}</h3>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-12">
+              <div className="row btn-finalizar-row">
+                <div className="col-md-12 btn-finalizar-row">
                   <SimpleModal />
                 </div>
               </div>

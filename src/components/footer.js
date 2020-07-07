@@ -2,6 +2,9 @@ import React from "react";
 import hiringCodersLogo from "../assets/logo-hiring-coders.svg";
 import vtexLogo from "../assets/logo-vtex.svg";
 import gamaAcademyLogo from "../assets/logo-gama.png";
+import linkedinLogo from "../assets/linkedinn.svg";
+import hackerRankLogo from "../assets/hackerRank.svg";
+import github from "../assets/github.svg";
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -23,8 +26,36 @@ export default class Footer extends React.Component {
           rel="stylesheet"
         />
         <div className="row footer">
-          <div className="col-md-12">
+          <div className="col-md-6 dev-data">
             <p> Copyright © 2020 | Gisely Lacerda</p>
+          </div>
+          <div className="col-md-6">
+            <div className="col-md-12 redes">
+              <a
+                href="https://www.linkedin.com/in/gisely-lacerda/"
+                title="linkedin"
+                rel="redes"
+                className="rede"
+              >
+                <img src={linkedinLogo} alt="Linkedin Logo" />
+              </a>
+              <a
+                href="https://www.hackerrank.com/giselyl"
+                title="hackerrank"
+                rel="redes"
+                className="rede"
+              >
+                <img src={hackerRankLogo} alt="HackerRank Logo" />
+              </a>
+              <a
+                href="https://github.com/giselyl"
+                title="github"
+                rel="redes"
+                className="rede"
+              >
+                <img src={github} alt="Github Logo" />
+              </a>
+            </div>
           </div>
           <div className="col-md-12 logos">
             <div className="companyLogo logo">

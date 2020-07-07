@@ -63,7 +63,7 @@ export default function SimpleModal() {
           <button
             type="button"
             onClick={handleClose}
-            className="btn btn-outline-secondary btn-lg btn-block finalizar "
+            className="btn btn-outline-secondary btn-lg btn-block fechar "
           >
             Fechar
           </button>
