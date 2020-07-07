@@ -68,7 +68,7 @@ export default class Cards extends React.Component {
                 <div className="col-md-12">
                   <div className="row">
                     <div className="col-md-6" id="pokemon-detailes">
-                      <ul>
+                      <ul id="description">
                         {this.state.pokemon?.types.map((it, index) => (
                           <li key={index}>{it.type.name}</li>
                         ))}
