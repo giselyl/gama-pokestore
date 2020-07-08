@@ -167,11 +167,10 @@
 }
 .remove-pokemon {
   font-family: "pokeFont", "changa", sans-serif;
-  /* text-shadow: rgb(45, 111, 255) -1.5px 0px, rgb(45, 111, 255) 0px 1.5px,
-    rgb(45, 111, 255) 1.5px 0px, rgb(45, 111, 255) 0px -1.5px; */
   color: #fbd800 !important;
   background-color: #4f559c !important;
   border-radius: 10px !important;
+  border: none;
 }
 
 #space-between-cards {

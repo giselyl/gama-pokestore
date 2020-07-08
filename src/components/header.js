@@ -5,6 +5,12 @@ export default class Header extends React.Component {
     super(props);
     this.state = { pokeName: "" };
   }
+  catchInput = () => {
+    this.props.findByName(this.state.pokeName);
+  };
+  handleChange = (event) => {
+    this.setState({ pokeName: event.target.value });
+  };
 
   render() {
     return (
@@ -27,8 +33,14 @@ export default class Header extends React.Component {
                       type="search"
                       placeholder="Pokemon name"
                       aria-label="Search"
+                      onChange={this.handleChange}
+                      onSubmit={this.catchInput}
                     />
-                    <button className="btn btn-dark btn-input" type="submit">
+                    <button
+                      className="btn btn-dark btn-input"
+                      type="submit"
+                      onClick={this.catchInput}
+                    >
                       Search
                     </button>
                   </div>

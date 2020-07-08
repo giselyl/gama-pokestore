@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "@material-ui/core/Modal";
-import gif from "../assets/giphy.gif";
 
 export default class SimpleModal extends React.Component {
   constructor(props) {

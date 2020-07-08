@@ -15,24 +15,44 @@ export default class Cards extends React.Component {
         pokemon: JSON.parse(cachedPokemon),
       });
     } else {
-      axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`).then((res) => {
-        const data = res.data;
+      axios
+        .get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        .then((res) => {
+          const data = res.data;
 
-        const poke = {
-          id: data.id,
-          name: data.name,
-          price: Math.floor(Math.random() * 100) + 2,
-          image: data.sprites.front_default,
-          types: [...data.types],
-        };
+          const poke = {
+            id: data.id,
+            name: data.name,
+            price: Math.floor(Math.random() * 100) + 2,
+            image: data.sprites.front_default,
+            types: [...data.types],
+          };
 
-        localStorage.setItem(`pokemon_${name}`, JSON.stringify(poke));
+          localStorage.setItem(`pokemon_${name}`, JSON.stringify(poke));
 
-        this.setState({
-          pokemon: poke,
-        });
-      });
+          this.setState({
+            pokemon: poke,
+          });
+        })
+        .catch(
+          this.setState({
+            pokemon: undefined,
+          })
+        );
     }
+  };
+
+  loadImage = () => {
+    let img;
+    axios
+      .get(
+        `https://pokeres.bastionbot.org/images/pokemon/${this.state.pokemon?.id}.png`
+      )
+      .then(
+        (img = `https://pokeres.bastionbot.org/images/pokemon/${this.state.pokemon?.id}.png`)
+      )
+      .catch((img = `{this.state.pokemon?.image}`));
+    return img;
   };
 
   async componentWillReceiveProps(props) {
@@ -46,6 +66,8 @@ export default class Cards extends React.Component {
   addToCart = () => this.props.callBack(this.state.pokemon);
 
   render() {
+    if (this.state.pokemon === undefined) return <div></div>;
+
     return (
       <div id="space-between-cards">
         <div className="container-fluid card">
@@ -61,6 +83,7 @@ export default class Cards extends React.Component {
                   <img
                     alt="pokemon"
                     className="pokemon-image"
+                    // src={this.loadImage}
                     src={`https://pokeres.bastionbot.org/images/pokemon/${this.state.pokemon?.id}.png`}
                     // src={this.state.pokemon?.image}
                   />

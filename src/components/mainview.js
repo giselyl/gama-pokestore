@@ -11,17 +11,25 @@ export default class Mainview extends React.Component {
   }
 
   fetchData = async (name, offset) => {
-    axios
-      .get(
-        `https://pokeapi.co/api/v2/pokemon/${
-          name ?? ""
-        }?offset=${offset}&limit=21`
-      )
-      .then((res) => {
-        this.setState({
-          list: res.data,
-        });
+    if (name) {
+      this.setState({
+        list: {
+          results: [{ name }],
+        },
       });
+    } else {
+      axios
+        .get(
+          `https://pokeapi.co/api/v2/pokemon/${
+            name ?? ""
+          }?offset=${offset}&limit=21`
+        )
+        .then((res) => {
+          this.setState({
+            list: res.data,
+          });
+        });
+    }
   };
 
   async componentWillReceiveProps(props) {
