@@ -91,7 +91,7 @@ export default class Cart extends React.Component {
                       className="row space-between-items"
                       key={`div_${index}`}
                     >
-                      <div key={`img_${index}`} className="col-md-3 carrinho">
+                      <div key={`img_${index}`} className="col-md-4 carrinho">
                         <img
                           alt="Bootstrap Preview"
                           className="pokemon-cart-image"
@@ -112,6 +112,7 @@ export default class Cart extends React.Component {
                             type="number"
                             aria-label="Search"
                             defaultValue={it.poke.count}
+                            min="1"
                             onChange={this.calculateprice(it)}
                           />
                           {/* <CounterInput
@@ -131,11 +132,11 @@ export default class Cart extends React.Component {
                           {/* </div> */}
                         </div>
                       </div>
-                      <div key={`price_${index}`} className={`col-md-3 price`}>
+                      <div key={`price_${index}`} className={`col-md-2 price`}>
                         <div className="row">
-                          <h6 className={`poke-price`}>
+                          <h5 className={`poke-price`}>
                             R$ {it.poke.price ?? 0}
-                          </h6>
+                          </h5>
                         </div>
                       </div>
                       <div

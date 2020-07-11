@@ -6,7 +6,7 @@ export default class Header extends React.Component {
     this.state = { pokeName: "" };
   }
   catchInput = () => {
-    this.props.findByName(this.state.pokeName);
+    this.props.findByName(this.state.pokeName.toLowerCase());
   };
   handleChange = (event) => {
     this.setState({ pokeName: event.target.value });
@@ -17,7 +17,7 @@ export default class Header extends React.Component {
       <>
         <div>
           <div className="container-fluid">
-            <div className="row">
+            <div className="row header">
               <div className="col-md-12">
                 <div className="row">
                   <div className="col-md-5">
