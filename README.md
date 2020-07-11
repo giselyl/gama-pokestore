@@ -1,6 +1,7 @@
 <b>This project is part of a trainning program called Hiring Coders. 
 The challenge is to  make a pokemon store using random prices, a search field, using pagination and a cart with a finishing Modal, it also must to be a  consistent cart using cache.</b>
-<project url> (https://pokeshopping.netlify.app/)
+## Deploy da Aplicação com Netlify: :dash:
+https://pokeshopping.netlify.app/
   
   ![](https://github.com/giselyl/gama-pokestore/blob/master/src/assets/giphy.gif)
 
