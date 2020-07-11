@@ -42,7 +42,7 @@ export default class Mainview extends React.Component {
 
   addToCart = (pokemon) => {
     let poke = JSON.parse(localStorage.getItem(`pokemon_${pokemon.name}`));
-    poke.count = (poke.count ?? 0) + 1;
+    poke.count = 1;
     localStorage.setItem(`pokemon_${pokemon.name}`, JSON.stringify(poke));
 
     this.setState({
